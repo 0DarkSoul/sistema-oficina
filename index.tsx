@@ -1,14 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
+/* 
+  IMPORTANTE:
+  O AI Studio já gera o app direto aqui,
+  então NÃO existe App.tsx
+*/
 
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+const App = () => {
+  return (
+    <div id="app-root"></div>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
